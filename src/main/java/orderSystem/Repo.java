@@ -1,4 +1,4 @@
 package orderSystem;
 
-public class Repo {
+public abstract class Repo {
 }
