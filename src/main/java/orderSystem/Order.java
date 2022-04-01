@@ -12,6 +12,11 @@ public class Order {
 
     }
 
+    private boolean checkIfOrderedProductIsAvailable(){
+        //TODO
+        return true;
+    }
+
 
 
 }
