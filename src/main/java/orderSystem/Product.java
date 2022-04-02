@@ -11,7 +11,6 @@ public class Product {
 
 
     public Product(){
-
     }
 
     public Product(String productId, String productName, double price, int numberInStore){
@@ -27,7 +26,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return  "ProductId: " + productId + "\t\t" +
+        return  "\tProductId: " + productId + "\t\t" +
                 "productName: " + productName + "\t\t" +
                 "price: " + price + "\t\t" +
                 "numberInStore: " + numberInStore +

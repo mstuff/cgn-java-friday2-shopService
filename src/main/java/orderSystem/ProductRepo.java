@@ -2,20 +2,26 @@ package orderSystem;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ProductRepo {
 
-    ArrayList<Product> productsInStore;
+    List<Product> productsInStore = new ArrayList<>();
 
+    public ProductRepo(){
+    }
 
+    public ProductRepo(Product product){
+        this.productsInStore.add(product);
+    }
 
-    public ProductRepo(ArrayList<Product> productsInStore){
-        this.productsInStore = productsInStore;
-
+    public List<Product> getAllProducts(){
+        return productsInStore;
     }
 
 
-    public  void addNewProduct(){
+    public void addNewProduct(Product newProduct){
+        productsInStore.add(newProduct);
     }
 
     public  void removeProductByName(){
@@ -44,5 +50,22 @@ public class ProductRepo {
         return 0;
     }
 
+    @Override
+    public String toString() {
+        return  "productsInStore: \n" + productsInStore;
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ProductRepo)) return false;
+        ProductRepo that = (ProductRepo) o;
+        return Objects.equals(productsInStore, that.productsInStore);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(productsInStore);
+    }
 }
