@@ -23,14 +23,15 @@ public class Product {
 
 
 
+
+
     @Override
     public String toString() {
-        return "Product{" +
-                "productId='" + productId + '\'' +
-                ", productName='" + productName + '\'' +
-                ", price=" + price +
-                ", numberInStore=" + numberInStore +
-                '}';
+        return  "ProductId: " + productId + "\t\t" +
+                "productName: " + productName + "\t\t" +
+                "price: " + price + "\t\t" +
+                "numberInStore: " + numberInStore +
+                "\n";
     }
 
     @Override
