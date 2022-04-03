@@ -16,11 +16,6 @@ public class ProductRepo {
         this.productsInStore.add(product);
     }
 
-    public List<Product> getAllProducts(){
-        return productsInStore;
-    }
-
-
 
     public void addOneNewProductToRepo(Product newProduct){
         //TODO: throw Exception if Product already exists
@@ -96,7 +91,7 @@ public class ProductRepo {
 
     @Override
     public String toString() {
-        return  "productsInStore: \n" + productsInStore;
+        return  "Our store contains the following products: \n" + formatListOfProducts();
 
     }
 
@@ -111,6 +106,24 @@ public class ProductRepo {
     @Override
     public int hashCode() {
         return Objects.hash(productsInStore);
+    }
+
+    private String formatListOfProducts(){
+
+        String formattedList = "";
+        for (Product currentProduct : productsInStore){
+            formattedList = formattedList +
+                    "product No: " + currentProduct.getProductId() + "\t\t" +
+                    "product name: " + currentProduct.getProductName() + "\t\t" +
+                    "product price: " + currentProduct.getPrice() + "\t\t" +
+                    "product in stock: " + currentProduct.getStock() + "\n";
+        }
+        return formattedList;
+
+    }
+
+    public List<Product> getAllProducts() {
+        return productsInStore;
     }
 
     public List<Product> getProductsInStore() {

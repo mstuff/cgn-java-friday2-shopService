@@ -26,10 +26,10 @@ public class Product {
 
     @Override
     public String toString() {
-        return  "\tProductId: " + productId + "\t\t" +
-                "productName: " + productName + "\t\t" +
+        return  "product No: " + productId + "\t\t" +
+                "product name: " + productName + "\t\t" +
                 "price: " + price + "\t\t" +
-                "numberInStore: " + stock +
+                "number in stock: " + stock +
                 "\n";
     }
 
